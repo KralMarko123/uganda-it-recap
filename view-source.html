@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View HTML Source</title>
+    <link rel="stylesheet" href="source-viewer.css" />
+  </head>
+  <body>
+    <div class="source-page">
+      <header class="source-header">
+        <p class="source-eyebrow">Code Viewer</p>
+        <h1>HTML Source</h1>
+        <p class="source-subtitle" id="file-name">Loading file...</p>
+      </header>
+
+      <main class="source-main">
+        <div class="source-toolbar">
+          <a
+            href="#"
+            id="open-file-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="toolbar-button secondary"
+          >
+            Open actual page
+          </a>
+
+          <button id="copy-button" class="toolbar-button primary" type="button">
+            Copy HTML
+          </button>
+        </div>
+
+        <pre class="code-wrapper"><code id="code-block">Loading...</code></pre>
+      </main>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get("file");
+
+      const codeBlock = document.getElementById("code-block");
+      const fileName = document.getElementById("file-name");
+      const openFileLink = document.getElementById("open-file-link");
+      const copyButton = document.getElementById("copy-button");
+
+      let htmlContent = "";
+
+      function escapeHtml(html) {
+        return html
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      async function copyHtml() {
+        if (!htmlContent) return;
+
+        try {
+          await navigator.clipboard.writeText(htmlContent);
+          copyButton.textContent = "Copied!";
+          setTimeout(() => {
+            copyButton.textContent = "Copy HTML";
+          }, 1500);
+        } catch {
+          copyButton.textContent = "Copy failed";
+        }
+      }
+
+      copyButton.addEventListener("click", copyHtml);
+
+      if (!file) {
+        fileName.textContent = "No file selected";
+        codeBlock.textContent = "No file was provided in the URL.";
+      } else {
+        fileName.textContent = file;
+        openFileLink.href = file;
+
+        fetch(file)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Could not load the HTML file.");
+            }
+            return response.text();
+          })
+          .then((html) => {
+            htmlContent = html;
+            codeBlock.innerHTML = escapeHtml(html);
+          })
+          .catch((error) => {
+            codeBlock.textContent =
+              "Could not load this file.\n\nError: " + error.message;
+          });
+      }
+    </script>
+  </body>
+</html>

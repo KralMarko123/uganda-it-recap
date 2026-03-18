@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>Learning Images</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #dcdcdc;
+        padding: 20px;
+      }
+
+      div {
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: darkblue;
+        font-size: 32px;
+      }
+
+      h2 {
+        color: darkgreen;
+      }
+
+      p {
+        color: #333333;
+        font-size: 16px;
+      }
+
+      img {
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      .code {
+        background-color: #eeeeee;
+        padding: 10px;
+        border-radius: 8px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Learning the img Tag</h1>
+      <p>We use the <strong>img</strong> tag to show images on a webpage.</p>
+    </div>
+
+    <div>
+      <h2>The Basic img Tag</h2>
+      <p>This is the basic structure:</p>
+
+      <div class="code">&lt;img src="cat.jpg" alt="A cat" width="300"&gt;</div>
+
+      <p>
+        <strong>src</strong> = where the image comes from<br />
+        <strong>alt</strong> = text describing the image<br />
+        <strong>width</strong> = how wide the image should be
+      </p>
+    </div>
+
+    <div>
+      <h2>Example 1: Local Image</h2>
+      <p>
+        This example uses an image saved in the same folder as the HTML file.
+      </p>
+
+      <div class="code">
+        &lt;img src="dance.jpg" alt="Dancers practicing" width="300"&gt;
+      </div>
+
+      <img src="dance.jpg" alt="Dancers practicing" width="300" />
+    </div>
+
+    <div>
+      <h2>Example 2: Internet Image</h2>
+      <p>This example uses an image link from the internet.</p>
+
+      <div class="code">
+        &lt;img src="https://via.placeholder.com/300x200" alt="Example image"
+        width="300"&gt;
+      </div>
+
+      <img
+        src="https://via.placeholder.com/300x200"
+        alt="Example image"
+        width="300"
+      />
+    </div>
+
+    <div>
+      <h2>Important Things to Remember</h2>
+      <ul>
+        <li>The <strong>img</strong> tag shows an image</li>
+        <li><strong>src</strong> tells the browser where the file is</li>
+        <li><strong>alt</strong> describes the image with words</li>
+        <li><strong>width</strong> changes the size</li>
+        <li>The <strong>img</strong> tag does not need a closing tag</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Practice Challenge</h2>
+      <p>Try these changes:</p>
+      <ol>
+        <li>Change the image width from 300 to 200</li>
+        <li>Change the alt text</li>
+        <li>Replace the image name with your own image</li>
+        <li>Add a second image</li>
+      </ol>
+    </div>
+  </body>
+</html>

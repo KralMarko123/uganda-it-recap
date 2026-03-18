@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <style>
+      body {
+        padding: 20px;
+        background-color: grey;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card {
+        margin-top: 50px;
+        background-color: azure;
+        padding: 30px;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      img {
+        margin: 20px;
+        width: 300px;
+        filter: grayscale(100%) blur(2px);
+        border-radius: 10px;
+      }
+
+      img:hover {
+        cursor: pointer;
+        filter: none;
+      }
+
+      .roll:hover {
+        transform: rotate(360deg);
+      }
+
+      .zoom:hover {
+        transform: scale(1.3);
+      }
+
+      .three-dee:hover {
+        transform: perspective(500px) translate3d(10px, 0, -20px) rotateY(50deg);
+      }
+
+      .travel:hover {
+        transform: translateX(100px);
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>For practice</h1>
+      <img
+        style="transition: 0.25s ease-in-out"
+        class="roll"
+        src="https://images.pexels.com/photos/35620447/pexels-photo-35620447.jpeg"
+        alt=""
+      /><img
+        style="transition: 1s ease-in-out"
+        class="zoom"
+        src="https://images.pexels.com/photos/36511070/pexels-photo-36511070.jpeg"
+        alt=""
+      /><img
+        style="transition: 0.5s ease-in-out"
+        class="travel"
+        src="https://images.pexels.com/photos/36328290/pexels-photo-36328290.jpeg"
+        alt=""
+      />
+    </div>
+
+    <div class="card">
+      <h1>Extra challenge</h1>
+      <img
+        style="transition: 0.5s ease-in-out"
+        class="three-dee"
+        src="https://images.pexels.com/photos/34629975/pexels-photo-34629975.jpeg"
+        alt=""
+      />
+    </div>
+  </body>
+</html>

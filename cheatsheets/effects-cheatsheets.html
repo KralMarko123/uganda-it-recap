@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>CSS Effects Cheatsheet</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #dcdcdc;
+        padding: 30px;
+      }
+
+      .sheet {
+        background-color: white;
+        padding: 25px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        margin-top: 0;
+        color: darkblue;
+      }
+
+      .line {
+        font-family: monospace;
+        font-size: 16px;
+        margin: 6px 0;
+        background-color: #f3f3f3;
+        padding: 6px 10px;
+        border-radius: 6px;
+      }
+
+      .property {
+        color: blue;
+        font-weight: bold;
+      }
+
+      .value {
+        color: darkred;
+      }
+
+      .comment {
+        color: #555555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sheet">
+      <h1>CSS Effects Cheatsheet</h1>
+
+      <div class="line">
+        <span class="property">filter</span>:
+        <span class="value">grayscale(100%)</span>;
+        <span class="comment">(makes image black and white)</span>
+      </div>
+
+      <div class="line">
+        <span class="property">filter</span>:
+        <span class="value">blur(4px)</span>;
+        <span class="comment">(makes image blurry)</span>
+      </div>
+
+      <div class="line">
+        <span class="property">filter</span>:
+        <span class="value">brightness(150%)</span>;
+        <span class="comment">(makes image brighter)</span>
+      </div>
+
+      <div class="line">
+        <span class="property">filter</span>:
+        <span class="value">contrast(200%)</span>;
+        <span class="comment">(makes darks and lights stronger)</span>
+      </div>
+
+      <div class="line">
+        <span class="property">filter</span>:
+        <span class="value">sepia(100%)</span>;
+        <span class="comment">(gives image a brown old-photo look)</span>
+      </div>
+
+      <div class="line">
+        <span class="property">img:hover</span> {
+        <span class="property">filter</span>:
+        <span class="value">grayscale(100%)</span>; }
+        <span class="comment">(changes image when mouse is over it)</span>
+      </div>
+
+      <div class="line">
+        <span class="property">transform</span>:
+        <span class="value">translateX(100px)</span>;
+        <span class="comment"
+          >(moves the element one hundred pixels to the right)</span
+        >
+      </div>
+
+      <div class="line">
+        <span class="property">transform</span>:
+        <span class="value">rotate(90deg) translateY(100px)</span>;
+        <span class="comment"
+          >(rotates the element 90 degrees to the right and moves it down one
+          hundred pixels)</span
+        >
+      </div>
+
+      <div class="line">
+        <span class="property">transition</span>: <span class="value">2s</span>;
+        <span class="comment"
+          >(makes any change to an element last 2 seconds)</span
+        >
+      </div>
+
+      <div class="line">
+        <span class="property">transform</span>:
+        <span class="value"
+          >perspective(1500px) translate3d(50px, 100px, -1500px)
+          rotateY(50deg);</span
+        >
+        <span class="comment"
+          >(make an element change its position in 3D space)</span
+        >
+      </div>
+    </div>
+  </body>
+</html>

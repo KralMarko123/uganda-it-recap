@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>Image Effects Demo</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #dcdcdc;
+        padding: 20px;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: darkblue;
+      }
+
+      h2 {
+        color: darkgreen;
+      }
+
+      img {
+        width: 250px;
+        border-radius: 10px;
+        margin: 10px;
+      }
+
+      /* IMAGE EFFECTS */
+
+      .grayscale {
+        filter: grayscale(100%);
+      }
+
+      .blur {
+        filter: blur(4px);
+      }
+
+      .bright {
+        filter: brightness(150%);
+      }
+
+      .contrast {
+        filter: contrast(200%);
+      }
+
+      .sepia {
+        filter: hue-torate(190deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="flex-direction: column">
+      <h1>Image Effects with CSS</h1>
+      <p>
+        We can change how images look using the
+        <strong>filter</strong> property.
+      </p>
+    </div>
+
+    <div>
+      <img
+        src="https://images.pexels.com/photos/8566524/pexels-photo-8566524.jpeg"
+        alt="Random image"
+      />
+      <img
+        class="grayscale"
+        src="https://images.pexels.com/photos/8566524/pexels-photo-8566524.jpeg"
+        alt="Grayscale image"
+      />
+      <img
+        class="blur"
+        src="https://images.pexels.com/photos/8566524/pexels-photo-8566524.jpeg"
+        alt="Blur image"
+      />
+      <img
+        class="bright"
+        src="https://images.pexels.com/photos/8566524/pexels-photo-8566524.jpeg"
+        alt="Bright image"
+      />
+
+      <img
+        class="contrast"
+        src="https://images.pexels.com/photos/8566524/pexels-photo-8566524.jpeg"
+        alt="Contrast image"
+      />
+
+      <img
+        class="sepia"
+        src="https://images.pexels.com/photos/8566524/pexels-photo-8566524.jpeg"
+        alt="Sepia image"
+      />
+    </div>
+  </body>
+</html>
