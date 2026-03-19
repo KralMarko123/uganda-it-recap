@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <style>
+      .card {
+        margin-top: 1rem;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+
+        box-shadow: 5px 5px 10px lightblue;
+        overflow: hidden;
+
+        transition: 0.3s;
+      }
+
+      .card img {
+        width: 200px;
+        height: 300px;
+      }
+
+      .card:hover {
+        cursor: pointer;
+      }
+
+      .first:hover {
+        transform: translateY(-10px);
+      }
+
+      .second:hover {
+        transform: translateX(-10px) rotate(-5deg) scale(1.1);
+      }
+
+      .third:hover {
+        box-shadow: -15px -15px 30px darkcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card first">
+      <img
+        src="https://images.pexels.com/photos/34433111/pexels-photo-34433111.jpeg"
+      />
+      <p>First Card</p>
+    </div>
+
+    <div class="card second">
+      <img
+        src="https://images.pexels.com/photos/36525521/pexels-photo-36525521.jpeg"
+      />
+      <p>Second Card</p>
+    </div>
+
+    <div class="card third">
+      <img
+        src="https://images.pexels.com/photos/36537240/pexels-photo-36537240.jpeg"
+      />
+      <p>Third Card</p>
+    </div>
+  </body>
+</html>
