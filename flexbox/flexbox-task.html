@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>Flexbox Exercise</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #dcdcdc;
+        padding: 10px;
+      }
+
+      /* SECTIONS */
+
+      .section {
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+      }
+
+      /* FLEX CONTAINER */
+
+      .container {
+        display: flex;
+        background-color: lightgray;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      /* BOXES */
+
+      .box {
+        background-color: steelblue;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      /* DIFFERENT LAYOUTS */
+
+      .center {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .space {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .column {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .extra,
+      .box {
+        gap: 0;
+        transition: 2s;
+      }
+
+      .extra:hover {
+        gap: 100px;
+        cursor: pointer;
+      }
+
+      .extra:hover .box {
+        transform: rotate(360deg);
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="section">
+      <h1>Flexbox Exercise</h1>
+      <p>Try to recreate these layouts using Flexbox.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Centered Boxes</h2>
+
+      <div class="container center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2. Space Between</h2>
+
+      <div class="container space">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>3. Column Centered</h2>
+
+      <div class="container column">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Extra Challenge</h2>
+
+      <div class="container center extra">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </div>
+  </body>
+</html>

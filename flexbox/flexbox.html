@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title>Flexbox Basics</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #dcdcdc;
+        padding: 20px;
+      }
+
+      .section {
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: darkblue;
+      }
+
+      h2 {
+        color: darkgreen;
+      }
+
+      .code {
+        background-color: #eeeeee;
+        padding: 10px;
+        border-radius: 8px;
+        font-family: monospace;
+        margin-top: 10px;
+      }
+
+      /* FLEX CONTAINERS */
+
+      .container {
+        display: flex;
+        background-color: #f4f4f4;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      /* BOXES */
+
+      .box {
+        background-color: steelblue;
+        color: white;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="section">
+      <h1>Flexbox Basics</h1>
+      <p>Flexbox helps us arrange items in a row or column.</p>
+    </div>
+
+    <div class="section">
+      <h2>display: flex</h2>
+
+      <p>This turns a container into a flex container.</p>
+
+      <div class="code">
+        .container {<br />
+        &nbsp;&nbsp;display: flex;<br />
+        }
+      </div>
+
+      <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>flex-direction</h2>
+
+      <p>Controls direction (row or column).</p>
+
+      <div class="code">flex-direction: column;</div>
+
+      <div class="container" style="flex-direction: column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>justify-content</h2>
+
+      <p>Moves items left, right, or center (main direction).</p>
+
+      <div class="code">justify-content: center;</div>
+
+      <div class="container" style="justify-content: center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>align-items</h2>
+
+      <p>Moves items up and down (cross direction).</p>
+
+      <div class="code">align-items: center;</div>
+
+      <div class="container" style="height: 150px; align-items: center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Common Values</h2>
+
+      <ul>
+        <li>flex-direction: row / column</li>
+        <li>justify-content: start / center / space-between</li>
+        <li>align-items: start / center / end</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Practice</h2>
+
+      <ol>
+        <li>Change row to column</li>
+        <li>Center items</li>
+        <li>Space items out</li>
+        <li>Make items go to the right</li>
+      </ol>
+    </div>
+  </body>
+</html>
